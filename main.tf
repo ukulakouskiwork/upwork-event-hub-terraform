@@ -12,14 +12,6 @@ provider "azurerm" {
   features {}
 }
 
-
-module "azure-rg" {
-  source   = "./modules/azurerm.rg"
-  name     = var.rg_name
-  location = var.location
-}
-
-
 module "azure-storage-account" {
   source                 = "./modules/azurerm.storageaccount"
   rg_name                = var.rg_name
